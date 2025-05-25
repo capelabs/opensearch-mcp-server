@@ -1,0 +1,2 @@
+# OpenSearch MCP Server
+
