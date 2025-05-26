@@ -50,16 +50,11 @@ TOOL_RESPONSE=$(curl -s -X POST "http://${OPENSEARCH_HOST}:${OPENSEARCH_PORT}/_p
                             "index": {
                                 "type": "string",
                                 "description": "OpenSearch index name."
-                            },å
+                            },
                             "query": {
                                 "type": "object",
                                 "description": "Opensearch query object",
                                 "additionalProperties": false
-                            },
-                            "aggs": {
-                                "type": "object",
-                                "description": "Additional arguments for the search query",
-                                "additionalProperties": true
                             }
                         }
                     }
