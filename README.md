@@ -14,7 +14,7 @@ OpenSearch MCP Server provides the following key features:
 ### Prerequisites
 
 - Docker and Docker Compose
-- Python 3.8+ (for running the agent)
+- Python 3.10+ (for running the agent)
 - OpenAI API key (for GPT model usage)
 
 ## 2. Architecture
