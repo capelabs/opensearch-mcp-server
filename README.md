@@ -101,7 +101,7 @@ curl -X GET "localhost:9200/_cluster/settings?pretty"
 ### 3. Accessing OpenSearch Dashboards & Add Sample Data
 
 Open a web browser and navigate to `http://localhost:5601` to open the OpenSearch dashboard and add sample data.
-You can add any sample data you like, we use `Sample flight data` in this README.
+You can add any sample data you like, In this case `Sample flight data` in this README.
 
 ![Add Data Screenshot](img/add_sample_data.png)
 
