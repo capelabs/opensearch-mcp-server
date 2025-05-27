@@ -96,19 +96,23 @@ After OpenSearch is fully started, the MCP server will be automatically activate
 ```bash
 # Check OpenSearch cluster settings
 curl -X GET "localhost:9200/_cluster/settings?pretty"
-
-# Check registered MCP tools
-curl -X GET "localhost:9200/_plugins/_ml/mcp/tools"
 ```
 
-### 3. Running the LangChain Agent
+### 3. Accessing OpenSearch Dashboards & Add Sample Data
+
+Open a web browser and navigate to `http://localhost:5601` to open the OpenSearch dashboard and add sample data.
+You can add any sample data you like, we use `Sample flight data` in this README.
+
+![Add Data Screenshot](img/add_sample_data.png)
+
+### 4. Running the LangChain Agent
 
 ```bash
 cd agents
 python agent.py
 ```
 
-### 4. Natural Language Search
+### 5. Natural Language Search
 
 Once the agent is running, you can ask questions in natural language:
 
@@ -120,10 +124,6 @@ Input: Search for logs from the last 24 hours
 ```
 
 ![OpenSearch MCP Server Screenshot](img/screenshot.png)
-
-### 5. Accessing OpenSearch Dashboards
-
-Open your web browser and navigate to `http://localhost:5601` to use OpenSearch Dashboards.
 
 ### Available MCP Tools
 
@@ -177,6 +177,7 @@ This project is distributed under the MIT License.
 ### Troubleshooting
 
 #### OpenSearch Connection Failed
+
 ```bash
 # Check OpenSearch container logs
 docker-compose logs opensearch
@@ -186,12 +187,14 @@ netstat -tulpn | grep :9200
 ```
 
 #### MCP Server Activation Failed
+
 ```bash
 # Restart MCP activation script
 docker-compose restart enable_mcp_server
 ```
 
 #### Python Agent Errors
+
 ```bash
 # Reinstall dependencies
 pip install --upgrade -r requirements.txt
