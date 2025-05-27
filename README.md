@@ -86,7 +86,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 docker-compose up -d
 
 # Check service status
-docker-compose ps
+docker ps
 ```
 
 ### 2. Verify MCP Server Status
